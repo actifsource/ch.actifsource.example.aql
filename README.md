@@ -14,17 +14,17 @@ Queries directly on the current models in the workspace can be performed in the 
 Eine Query besteht aus einer Reihe von Definitionen, gefolgt von einer Query-Expression. Jede Definition ist eine Subquery, welche ein Zwischenresultat in einer Variable speichert. Definitionen dienen dazu, Queries übersichtlicher zu gestalten, indem die Verschachtlungstiefe reduziert wird.   
 Beispiel:    
 
-$Super = UseProperty.subclass;    
-every Property $P with ($P.range in $Super)
+> $Super = UseProperty.subclass;    
+> every Property $P with ($P.range in $Super)
 
 Die erste Zeile ist eine Definition, welche die (direkten) Superklassen von UseProperty in der Variable $Super abspeichert. Die zweite Zeile ist dann die eigentliche Query, welche alle Properties selektiert, welche als Range eine dieser Superklassen haben. 
 
 Die vollständige Struktur einer Query ist:    
-$Varname = Expression ;    
-$Varname = Expression ;    
-...    
-$Varname = Expression ;    
-Expression     
+> $Varname = Expression ;    
+> $Varname = Expression ;    
+> ...    
+> $Varname = Expression ;    
+> Expression     
 
 Über die in einer Definition definierte Variable kann im weiteren Verlauf der Query auf das Resultat der Subquery zugegriffen werden. 
 
@@ -54,16 +54,16 @@ Ressourcen können mit ihrem Namen spezifiziert werden.
 Eine im Scope definierte Variable kann mittels $Varname referenziert werden.     
 Beispiel: 
 
-$C = every Class;    
-$R = Resource;    
-$R in $C    
+> $C = every Class;    
+> $R = Resource;    
+> $R in $C    
 
 ### Null    
 •	null 
 
 Steht für ein fehlendes Attribut oder Property, was es ermöglicht diese auf Vorhandensein zu prüfen: 
 
-($Bar.name == null) or ($foo.range != null)
+> ($Bar.name == null) or ($foo.range != null)
 
 ## Boolesche Ausdrücke
 
@@ -139,15 +139,16 @@ Properties und Attribute können nicht direkt rückwärts abgefragt werden. Anstatt
 Dabei muss classType eine Klasse benennen. Die Variable mit angegebenem Name ist vom Klassentyp und kann innerhalb des booleschen Ausdrucks booleanExpr verwendet werden, um Bedingungen zu formulieren. Das Resultat des Ausdrucks ist die Menge aller Ressourcen vom Typ classType für welche die Bedingung booleanExpr erfüllt ist. 
 
 Beispiele:   
-every Attribute $A with $A.literalRange == StringLiteral   
-every Property $P with ($P.range != Resource) and ($P.subjectCardinality.maxCardinality == 1)   
+> every Attribute $A with $A.literalRange == StringLiteral   
+> every Property $P with ($P.range != Resource) and ($P.subjectCardinality.maxCardinality == 1)   
 
 ### Verkettung
 Mehrere Selektionen können aneinandergehängt werden:    
 •	resourceExpr.property.property. ... .property    
 
 Beispiel:    
-UseProperty.subclass.property.range.name
+> UseProperty.subclass.property.range.name    
+
 Selektiert die Namen von den Ranges aller Properties der Superklasse von UseProperty. 
 
 ## Mengenausdrücke
@@ -165,8 +166,8 @@ Anzahl Elemente einer Menge (ergibt einen Integer):
 
 ## Beispiele
 Alle abstrakten Klassen von denen es keine Unterklassen gibt   
-every Class $C with ($C.classModifier == Abstract)    
-               and  (count (every Class $S with $C in $S.subclass*) == 0)   
+> every Class $C with ($C.classModifier == Abstract)    
+>                and  (count (every Class $S with $C in $S.subclass*) == 0)   
                
 Zwei Bedingungen müssen für die gesuchten Klassen gelten:    
 •	Die Klasse muss abstrakt sein.    
