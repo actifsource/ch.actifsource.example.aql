@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource format="5.6.0" guid="dcad3d4a-9478-11ec-8848-59047d65a340">
+  <predicate guid="3169f49a-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="dcad6497-9478-11ec-8848-59047d65a340" type="resource" guid="dcad3d3b-9478-11ec-8848-59047d65a340" />
+  </predicate>
+  <predicate guid="33fc8660-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="dcad6498-9478-11ec-8848-59047d65a340" type="literal">AbstractClassQuery</object>
+  </predicate>
+  <predicate guid="dcad3d3c-9478-11ec-8848-59047d65a340">
+    <object statement-guid="dcad6499-9478-11ec-8848-59047d65a340" type="literal">// in AQL Text:
+every Class $C with $C.modifier == Abstract</object>
+  </predicate>
+</resource>
+

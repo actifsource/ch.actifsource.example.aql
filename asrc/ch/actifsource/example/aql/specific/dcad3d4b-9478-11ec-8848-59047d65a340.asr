@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource format="5.6.0" guid="dcad3d4b-9478-11ec-8848-59047d65a340">
+  <predicate guid="3169f49a-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="dcad649a-9478-11ec-8848-59047d65a340" type="resource" guid="dcad3d3b-9478-11ec-8848-59047d65a340" />
+  </predicate>
+  <predicate guid="33fc8660-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="dcad649b-9478-11ec-8848-59047d65a340" type="literal">ClassesWithMorePropertiesThan_5</object>
+  </predicate>
+  <predicate guid="dcad3d3c-9478-11ec-8848-59047d65a340">
+    <object statement-guid="dcad649c-9478-11ec-8848-59047d65a340" type="literal">// in AQL Text:
+every Class $C with (count $C.property &gt; 5)</object>
+  </predicate>
+</resource>
+

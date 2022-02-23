@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource format="5.6.0" guid="dcad3d4c-9478-11ec-8848-59047d65a340">
+  <predicate guid="3169f49a-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="dcad649d-9478-11ec-8848-59047d65a340" type="resource" guid="dcad3d3b-9478-11ec-8848-59047d65a340" />
+  </predicate>
+  <predicate guid="33fc8660-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="dcad649e-9478-11ec-8848-59047d65a340" type="literal">PreStateTransitionQuery</object>
+  </predicate>
+  <predicate guid="dcad3d3c-9478-11ec-8848-59047d65a340">
+    <object statement-guid="dcad649f-9478-11ec-8848-59047d65a340" type="literal">// in AQL Text:
+$NextState = StateB;
+$PreState = every SimpleState $S with ($NextState  in $S.transition.nextState);
+$PreState</object>
+  </predicate>
+</resource>
+
